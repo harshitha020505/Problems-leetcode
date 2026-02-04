@@ -6,14 +6,14 @@ class Solution {
             d=d+a;
             c++;
         }
-        for(int i=0;i<2;i++){
-            if(d.contains(b)){
-                return c;
-            }
-            else{
-                d=d+a;
-                c++;
-            }
+        if(d.contains(b)){
+            return c;
+
+        }
+        c++;
+        d=d+a;
+        if(d.contains(b)){
+            return c;
         }
         return -1;
     }
