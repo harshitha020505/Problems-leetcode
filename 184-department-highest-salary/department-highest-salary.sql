@@ -1,0 +1,2 @@
+# Write your MySQL query statement below
+select d.name as Department,a.name as Employee, a.salary as salary from (select *, Dense_Rank() over (PARTITION BY e.departmentId order by e.salary  desc) as rnk from employee e)  a  left join department d on d.id=a.departmentid  where rnk=1;
