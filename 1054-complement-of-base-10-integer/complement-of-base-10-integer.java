@@ -3,7 +3,7 @@ class Solution {
       if(n==0) return 1;
       int a=1;
       while(a<=n){
-        a=a*2;
+        a=a<<1;
       }
       return (a-1)^n;   
     }
