@@ -5,6 +5,6 @@ class Solution {
       while(a<=n){
         a=a*2;
       }
-      return a-n-1;   
+      return (a-1)^n;   
     }
 }
